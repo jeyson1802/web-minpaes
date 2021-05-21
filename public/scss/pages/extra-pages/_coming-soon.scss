@@ -1,0 +1,54 @@
+// COMING SOON PAGE ============================== //
+.coming-soon-page {
+  .header {
+    &__logo {
+      // Adding some padding to the top and bottom of the logo on the coming soon page since it is lacking the menu items
+      padding: 2rem 0;
+    }
+  }
+}
+.coming-soon {
+  position: relative;
+  height: 100vh;
+
+  &__cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: {
+      image: url("../../images/background-2.jpg");
+      size: cover;
+      position: center center;
+      repeat: no-repeat;
+    }
+
+    @include respond(lg) {
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    margin-top: 45rem;
+    padding: $section-default-spacing 0;
+
+    @include respond(md) {
+      margin-top: 40vh;
+      padding: 0;
+    }
+
+    @include respond(lg) {
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 5.5rem;
+      text-transform: capitalize;
+      margin-bottom: 1rem;
+    }
+  }
+}

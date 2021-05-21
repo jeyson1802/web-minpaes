@@ -1,0 +1,182 @@
+// COMING SOON PAGE ============================== //
+.landing-page-page {
+  .header {
+    &__logo {
+      // Adding some padding to the top and bottom of the logo on the coming soon page since it is lacking the menu items
+      padding: 2rem 0;
+    }
+  }
+}
+.landing-page {
+  position: relative;
+  height: 100vh;
+
+  &__cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: {
+      image: url("../../images/background-ebook.jpg");
+      size: cover;
+      position: center center;
+      repeat: no-repeat;
+    }
+
+    @include respond(lg) {
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    margin-top: 55rem;
+    padding: $section-default-spacing 0;
+
+    @include respond(md) {
+      margin-top: 40vh;
+      padding: 0;
+    }
+
+    @include respond(lg) {
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 5.5rem;
+      text-transform: capitalize;
+      margin-bottom: 1rem;
+      margin-top: 10rem;
+
+      @include respond(lg) {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  &__form__input {
+
+    display: block;
+    width: 100%;
+    padding: 1.6rem 2rem;
+    background-color: transparent;
+    font-size: 1.6rem;
+    border: .1rem solid #d1d1d1;
+    transition: border-color .3s ease-out;
+
+    @include respond(lg) {
+      display: inline;
+      width: 70%;
+      margin-bottom: 2rem;
+    }
+
+  }
+
+&__button {
+  
+  font-size: 1.6rem;
+  padding: $button-padding;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+  color: $white-color;
+  background-color: $accent-color;
+  @include border($color: transparent);
+  @include transition;
+
+  @include respond(md) {
+    padding: 1.6rem 3rem;
+    width: 70%;
+    margin: auto;
+  }
+
+  &:hover {
+    color: $white-color;
+    background-color: $hover-active-color;
+  }
+
+  &.button--link {
+    color: $accent-color;
+    background-color: transparent;
+    padding: 1.6rem 0;
+
+    i {
+      margin-left: 1rem;
+    }
+
+    &:hover {
+      color: $hover-active-color;
+    }
+  }
+}
+
+// Checkbox
+#{&}__checkbox {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding-left: 2rem;
+  user-select: none;
+  margin-bottom: 2rem;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked ~ .checkmark {
+      background-color: $hover-active-color;
+      border-color: $hover-active-color;
+      &::after {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -20%) rotate(45deg);
+        border-color: $lighter-gray-color;
+      }
+    }
+  }
+
+  &:hover {
+    .checkmark {
+      transform: scale(0.8);
+    }
+  }
+
+  .checkmark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: scale(1);
+    @include border($color: $accent-color);
+    @include transition;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -20%) rotate(45deg);
+      width: 0.5rem;
+      height: 1rem;
+      @include border;
+      border-width: 0 0.2rem 0.2rem 0;
+      border-color: $lighter-gray-color;
+      @include transition;
+    }
+  }
+}
+
+}
+
+

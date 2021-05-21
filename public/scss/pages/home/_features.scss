@@ -1,0 +1,21 @@
+// FEATURES SECTION (HOMEPAGE 3)
+.features {
+  &__icon {
+    font-size: 4rem;
+  }
+
+  &__title,
+  &__excerpt {
+    margin-bottom: 1rem;
+  }
+
+  [class*="flex-"]:first-child,
+  [class*="flex-"]:nth-child(2) {
+    @include respond(md) {
+      margin-bottom: $gutter-margin-vertical;
+    }
+    @include respond(lg) {
+      margin-bottom: 0;
+    }
+  }
+}

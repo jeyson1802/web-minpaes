@@ -1,0 +1,91 @@
+// CART (CART PAGE) ============================ //
+.cart {
+  &__table {
+    border-bottom: 0.1rem solid $light-gray-color;
+    display: block;
+    border-collapse: collapse;
+
+    &--head {
+      font-size: 2rem;
+      text-align: right;
+      background-color: $primary-color;
+      color: $white-color;
+
+      tr th {
+        width: 100%;
+        padding: 1rem 2rem;
+        border: 0;
+      }
+
+      tr th:first-child {
+        text-align: left;
+      }
+    }
+
+    &--body {
+      text-align: right;
+
+      tr td:first-child {
+        text-align: left;
+      }
+
+      tr td {
+        width: 100%;
+        padding: 1rem 2rem;
+        border-bottom: 0.1rem solid $lighter-gray-color;
+      }
+
+      .product-image {
+        margin-right: 1.6rem;
+        div {
+          // image holder
+          width: 10rem;
+        }
+      }
+
+      .product-name {
+        font-size: 1.65rem;
+        flex: auto;
+      }
+    }
+
+    &--foot {
+      tr td {
+        padding: 1rem 2rem;
+      }
+
+      .cart__links {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        div {
+          flex: 1;
+
+          &:last-child {
+            // holds the clear button
+            text-align: right;
+          }
+        }
+
+        .clear-button {
+          margin-left: 1rem;
+          background-color: $secondary-color;
+          &:hover {
+            background-color: $danger-color;
+          }
+        }
+      }
+    }
+  }
+
+  &__estimates {
+    border-top: 0.1rem solid $lighter-gray-color;
+
+    &--header {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 0.1rem solid $lighter-gray-color;
+    }
+  }
+}

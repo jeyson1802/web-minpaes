@@ -1,0 +1,13 @@
+// OUR STAFFS SECTION (HOMEPAGE 2 & ABOUT)
+.our-staffs {
+  [class*="flex-"]:last-child {
+    // Adding some margin to the top on tablet devices
+    @include respond(md) {
+      margin-top: $default-margin;
+    }
+
+    @include respond(lg) {
+      margin-top: 0;
+    }
+  }
+}

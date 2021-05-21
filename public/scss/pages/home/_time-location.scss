@@ -1,0 +1,13 @@
+// TIME AND LOCATION (HOMEPAGE 2) ====================================== //
+.home-2 {
+  .time-location {
+    background-color: $white-color;
+    margin-top: -18rem;
+    position: relative;
+    z-index: 20;
+    @include boxShadow;
+    &__content {
+      padding-left: 4rem;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+// WORSHIP SECTION (HOMEPAGE 3)
+.worship {
+  padding: 12rem 0;
+  background: {
+    image: linear-gradient(to right, rgba($black-color, 0.4), rgba($black-color, 0.4)),
+      url(../../images/background-1.jpg);
+    size: cover;
+    position: center center;
+    repeat: no-repeat;
+  }
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}

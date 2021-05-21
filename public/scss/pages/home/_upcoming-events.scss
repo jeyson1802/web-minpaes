@@ -1,0 +1,27 @@
+// UPCOMING EVENTS SECTION (HOMEPAGE 3) ============================ //
+.home-3 .upcoming-events {
+  background: {
+    image: linear-gradient(to right, rgba($black-color, 0.4), rgba($black-color, 0.4)),
+      url("../../images/background-5.jpg");
+    position: center center;
+    size: cover;
+    repeat: no-repeat;
+  }
+
+  .event {
+    &:not(:last-child) {
+      margin-bottom: $gutter-margin-vertical;
+    }
+    &:not(:first-child) {
+      padding-top: $default-padding;
+    }
+  }
+
+  .arrow {
+    width: 4rem;
+    height: 4rem;
+    border-top: 1rem solid $white-color;
+    border-right: 1rem solid $white-color;
+    transform: rotate(45deg);
+  }
+}

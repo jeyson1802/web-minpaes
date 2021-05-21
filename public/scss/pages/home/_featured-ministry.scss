@@ -1,0 +1,39 @@
+// FEATURED MINISTRY SECTION (HOMEPAGE 3)
+.featured-ministry {
+  position: relative;
+  @include respond(md) {
+    height: 100%;
+  }
+  @include respond(lg) {
+    height: $default-card-height;
+  }
+
+  &__content {
+    margin: $gutter-margin-vertical 0 $section-default-spacing;
+    @include respond(md) {
+      margin: $section-default-spacing 0;
+    }
+  }
+
+  &__card {
+    @include respond(md) {
+      position: absolute;
+      width: percentage(4 / 12);
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    @include respond(lg) {
+      width: percentage(5 / 12);
+    }
+  }
+
+  .ministry__content {
+    display: block;
+
+    .excerpt {
+      margin: $default-margin 0;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+// SERMONS CARD OVERALL STYLING ============================ //
+.sermon {
+  color: $white-color;
+  text-align: center;
+  &__metas {
+    display: flex;
+    justify-content: center;
+
+    .meta {
+      @extend %metas;
+    }
+  }
+
+  &__content {
+    @extend %content;
+
+    .excerpt {
+      margin-bottom: $default-margin;
+    }
+
+    .title {
+      @extend %title;
+    }
+  }
+
+  &__download {
+    font-size: 3rem;
+    display: flex;
+    margin-top: 1rem;
+    @include justify-align-center;
+
+    @include respond(lg) {
+      font-size: 2rem;
+    }
+    span {
+      margin-right: $default-margin;
+    }
+
+    a {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+
+      i {
+        padding: 0.4rem;
+      }
+
+      &:hover i {
+        color: $hover-active-color;
+      }
+    }
+  }
+
+  &__link {
+    margin-top: 1rem;
+    margin-bottom: 9rem;
+  }
+
+  &__link__home {
+    margin-top: 1rem;
+  }
+
+  &__link__single {
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+  }
+}

@@ -1,0 +1,42 @@
+// PRODUCT DETAILS (SINGLE PRODUCT PAGE) ============================ //
+.product-details {
+  &__details {
+    margin-bottom: $default-margin;
+    .product-details__name {
+      text-transform: capitalize;
+    }
+    .product-details__price {
+      font-size: 2rem;
+    }
+  }
+
+  &__description {
+    margin-bottom: $default-margin;
+  }
+
+  &__quantity {
+    margin-bottom: $default-margin;
+
+    .form__group {
+      width: 25%;
+      margin-right: $gutter-padding-horizontal * 2; // 1.5rem * 2
+      @include respond(lg) {
+        width: 15%;
+      }
+    }
+  }
+}
+
+// Our recommendation section
+.our-recommendations {
+  [class*="flex-"]:last-child {
+    @include respond(md) {
+      // Add some margin to the last column on medium size devices
+      margin-top: $gutter-margin-vertical;
+    }
+    @include respond(lg) {
+      // Removing the margin on larger devices
+      margin-top: 0;
+    }
+  }
+}

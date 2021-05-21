@@ -1,0 +1,17 @@
+.our-testimonial {
+  background: {
+    image: linear-gradient(to right, rgba($black-color, 0.4), rgba($black-color, 0.4)),
+      url("../../images/background-3.jpg");
+    size: cover;
+    position: center center;
+    repeat: no-repeat;
+  }
+
+  &__content {
+    margin-top: 0; // remove cover height
+  }
+
+  .testimonial {
+    margin-bottom: 0;
+  }
+}
