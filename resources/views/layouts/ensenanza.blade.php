@@ -176,8 +176,6 @@
     <script src="../../js/plugins/lightbox.min.js"></script>
     <!-- Main (custom) script -->
     <script src="../../dist/js/main.min.js"></script>
-
-    @include('layouts.pixelfacebookads')
     
     @stack('scripts')
 

@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "min-css": "node-sass --watch scss/main.scss -o dist/css --output-style compressed",
+    "max-css": "node-sass --watch scss/main.scss -o css --output-style",
     "min-js": "minify js/main.js > dist/js/main.min.js"
   },
   "author": "",

@@ -75,7 +75,7 @@
 
             <li id="li-radio" class="header__list"><a href="{{ url('radio') }}">Radio</a></li>
 
-            <li id="li-registrocontacto" class="header__list"><a href="{{ url('registrocontacto') }}">Contacto</a></li>            
+            <li id="li-registrocontacto" class="header__list"><a href="{{ url('registrocontacto') }}">Contacto</a></li>
 
           </ul><!-- .header__navitems ends -->
 
@@ -103,7 +103,7 @@
       @yield('content')
 
       @include('layouts.horariomap')
-      
+
     </main>
     <!-- =================== MAIN SECTION ENDS ============================= -->
 
@@ -135,7 +135,7 @@
 
             <div class="flex-md-6 flex-lg-4">
 
-              <div class="footer__info copyright">&copy; 2020 - MINPAES - Todos los derechos reservados</div>
+              <div class="footer__info copyright">&copy; 2022 - MINPAES - Todos los derechos reservados</div>
 
             </div><!-- .flex-* ends -->
 
@@ -175,8 +175,6 @@
     <script src="js/plugins/lightbox.min.js"></script>
     <!-- Main (custom) script -->
     <script src="dist/js/main.min.js"></script>
-
-    @include('layouts.pixelfacebookads')
 
     @stack('scripts')
 

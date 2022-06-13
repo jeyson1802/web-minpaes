@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:title" content="eBook - El poder escondido de la iglesia">
-    <meta property="og:description" content="eBook - El poder escondido de la iglesia">
-    <meta property="og:site_name" content="eBook - El poder escondido de la iglesia">
+    <meta property="og:title" content="Gracias por registrarte">
+    <meta property="og:description" content="Gracias por registrarte">
+    <meta property="og:site_name" content="Gracias por registrarte">
     <meta property="og:image" itemprop="image" content="https://minpaes.org/images/background-ebook.jpg">
     <meta property="og:image:secure_url" itemprop="image" content="https://minpaes.org/images/background-ebook.jpg">
     <meta property="og:url" content="https://minpaes.org/landing/ebook/elpoderescondidodelaiglesia/">
@@ -26,13 +27,55 @@
     <!-- Place Custom Favicon here -->
     <link rel="shortcut icon" href="../../images/favicon.png" type="image/png">
 
+    <style type="text/css">
+        .button-telegram {
+            font-size: 1.8rem;
+            padding: 1.6rem 2rem;
+            text-align: center;
+            border: 0;
+            cursor: pointer;
+            color: #000;
+            background-color: #f7c718;
+            border: 0.1rem solid rgba(0, 0, 0, 0);
+            transition: all .3s ease-out;
+            font-weight: bold;
+        }
+
+        .our-belief__box .heading.thanks::before {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 0.4rem;
+            background-color: #f7c718;
+            bottom: -0.8rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .message {
+            height: 80rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media screen and (min-width: 34.5625em) {
+            .message {
+                height: 65vh;
+            }
+        }
+
+        @media screen and (min-width: 87.5625em) {
+            .message {
+                height: 70rem;
+            }
+        }
+
+    </style>
+
 </head>
 
 <body>
-
-    <div class="page-loader">
-      <div class="loader"><img src="../../images/logo-sm.svg" alt=""></div>
-    </div>
 
     <!--
     ========================================================
@@ -41,7 +84,7 @@
     -->
     <main>
 
-      @yield('content')
+        @yield('content')
 
     </main>
     <!-- =================== MAIN SECTION ENDS ============================= -->
@@ -49,7 +92,9 @@
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- loading in JQuery locally if CDN failed -->
-    <script>window.jQuery || document.write('<script src="js/jquery.min.js">\x3C/script>')</script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery.min.js">\x3C/script>')
+    </script>
     <!-- Owl Carousel script -->
     <script src="../../js/plugins/owl.carousel.js"></script>
     <!-- JQuery Validator script -->
@@ -63,9 +108,8 @@
     <!-- Main (custom) script -->
     <script src="../../dist/js/main.min.js"></script>
 
-    @include('layouts.pixelfacebookads')
-
     @stack('scripts')
 
 </body>
+
 </html>

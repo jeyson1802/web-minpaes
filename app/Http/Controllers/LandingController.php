@@ -4,8 +4,12 @@ namespace App\Http\Controllers;
 
 use Mail;
 use App\Mail\MailRegistroLanding;
+use App\Mail\MailRegistroLandingArrepentimientoMexico;
+use App\Mail\MailRegistroLandingConferenciaMexico;
+use App\Mail\MailRegistroMexico;
 use App\Models\Landing;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class LandingController extends Controller
 {
@@ -45,10 +49,27 @@ class LandingController extends Controller
         $landing->suscripcion = $request->input("suscripcion");
         $landing->save();
 
-        $correo = $request->input("correo");
-        Mail::to($correo)->send(new MailRegistroLanding($landing));
+        $campana = $landing->campana;
+        $correo = $landing->correo;
 
-        return view('registroconexito');
+        if(Str::contains($campana, 'arrepentimiento-mexico')) {
+
+            Mail::to($correo)->send(new MailRegistroLandingArrepentimientoMexico($landing));
+            Mail::to("arrepentimientosantidadmex@gmail.com")->send(new MailRegistroMexico($landing));
+            return view('graciasarrepentimientomexico');
+
+        } else if(Str::contains($campana, 'conferencia-mexico')) {
+
+            Mail::to($correo)->send(new MailRegistroLandingConferenciaMexico($landing));
+            Mail::to("arrepentimientosantidadmex@gmail.com")->send(new MailRegistroMexico($landing));
+            return view('graciasconferenciamexico');
+
+        } else {
+
+            Mail::to($correo)->send(new MailRegistroLanding($landing));
+            return view('registroconexito');
+        }
+
     }
 
     /**

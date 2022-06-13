@@ -52,7 +52,15 @@ Route::get('/ensenanzas/01/ministeriodelespiritusanto', function () {
 });
 
 Route::get('/landing/ebook/elpoderescondidodelaiglesia', function () {
-    return view('landings.ebook_facebook_ads');
+    return view('landings.ebook');
+});
+
+Route::get('/landing/arrepentimientomexico', function () {
+    return view('landings.arrepentimientomexico');
+});
+
+Route::get('/landing/test', function () {
+    return view('graciasarrepentimientomexico');
 });
 
 Route::resource('contacto', 'ContactoController');

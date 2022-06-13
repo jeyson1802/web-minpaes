@@ -1,7 +1,7 @@
 # For more information: https://laravel.com/docs/sail
 version: '3'
 services:
-    laravel.test:
+    web.minpaes:
         build:
             context: ./vendor/laravel/sail/runtimes/7.4
             dockerfile: Dockerfile
@@ -9,7 +9,7 @@ services:
                 WWWGROUP: '${WWWGROUP}'
         image: sail-8.0/app
         ports:
-            - '8090:80'
+            - '9080:80'
         environment:
             WWWUSER: '${WWWUSER}'
             LARAVEL_SAIL: 1
@@ -18,11 +18,11 @@ services:
         networks:
             - sail
         depends_on:
-            - mysql
-    mysql:
+            - mysql.minpaes
+    mysql.minpaes:
         image: 'mysql:8.0'
         ports:
-            - '3306'
+            - '3307:3306'
         environment:
             MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
             MYSQL_DATABASE: '${DB_DATABASE}'
@@ -30,7 +30,7 @@ services:
             MYSQL_PASSWORD: '${DB_PASSWORD}'
             MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
         volumes:
-            - 'sailmysql:/var/lib/mysql'
+            - 'sailmysqlminpaes:/var/lib/mysql'
         networks:
             - sail
         healthcheck:
@@ -39,7 +39,7 @@ networks:
     sail:
         driver: bridge
 volumes:
-    sailmysql:
+    sailmysqlminpaes:
         driver: local
     sailredis:
         driver: local
